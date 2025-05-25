@@ -1,5 +1,18 @@
-import 'package:dart_calculator_project/dart_calculator_project.dart' as dart_calculator_project;
+import 'dart:io';
 
-void main(List<String> arguments) {
-  print('Hello world: ${dart_calculator_project.calculate()}!');
+void main() {
+  stdout.write('Enter first number: ');
+  double num1 = double.parse(stdin.readLineSync()!);
+
+  stdout.write('Enter second number: ');
+  double num2 = double.parse(stdin.readLineSync()!);
+
+  print('\n --- Results --- ');
+
+  print('Addition (+): ${num1 + num2}');
+  print('Subtraction (-): ${num1 - num2}');
+  print('Multiplication (*): ${num1 * num2}');
+  print('Division (/): ${num1 / num2}');
+  print('Modulus (%): ${num1 % num2}');
+  print('Integer Division (~/): ${num1 ~/ num2}');
 }
